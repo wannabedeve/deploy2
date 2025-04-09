@@ -3,18 +3,15 @@ import type { Metadata } from 'next'
 import type { Page, Post } from '../payload-types'
 
 import { mergeOpenGraph } from './mergeOpenGraph'
-import { getServerSideURL } from './getURL'
 
-export const generateMeta = async (args: {
-  doc: Partial<Page> | Partial<Post>
-}): Promise<Metadata> => {
+export const generateMeta = async (args: { doc: Page | Post }): Promise<Metadata> => {
   const { doc } = args || {}
 
   const ogImage =
     typeof doc?.meta?.image === 'object' &&
     doc.meta.image !== null &&
     'url' in doc.meta.image &&
-    `${getServerSideURL()}`
+    `${process.env.NEXT_PUBLIC_SERVER_URL}${doc.meta.image.url}`
 
   const title = doc?.meta?.title
     ? doc?.meta?.title + ' | Payload Website Template'

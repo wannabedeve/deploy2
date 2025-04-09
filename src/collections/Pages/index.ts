@@ -1,4 +1,4 @@
-import type { CollectionConfig } from 'payload'
+import type { CollectionConfig, TypedLocale } from 'payload'
 
 import { authenticated } from '../../access/authenticated'
 import { authenticatedOrPublished } from '../../access/authenticatedOrPublished'
@@ -20,9 +20,7 @@ import {
   OverviewField,
   PreviewField,
 } from '@payloadcms/plugin-seo/fields'
-import { getServerSideURL } from '@/utilities/getURL'
-
-export const Pages: CollectionConfig<'pages'> = {
+export const Pages: CollectionConfig = {
   slug: 'pages',
   access: {
     create: authenticated,
@@ -30,38 +28,34 @@ export const Pages: CollectionConfig<'pages'> = {
     read: authenticatedOrPublished,
     update: authenticated,
   },
-  // This config controls what's populated by default when a page is referenced
-  // https://payloadcms.com/docs/queries/select#defaultpopulate-collection-config-property
-  // Type safe if the collection slug generic is passed to `CollectionConfig` - `CollectionConfig<'pagess'>
-  defaultPopulate: {
-    title: true,
-    slug: true,
-  },
   admin: {
     defaultColumns: ['title', 'slug', 'updatedAt'],
     livePreview: {
-      url: ({ data }) => {
+      url: ({ data, locale }) => {
         const path = generatePreviewPath({
           slug: typeof data?.slug === 'string' ? data.slug : '',
           collection: 'pages',
+          locale: locale.code,
         })
 
-        return `${getServerSideURL()}${path}`
+        return `${process.env.NEXT_PUBLIC_SERVER_URL}${path}`
       },
     },
-    preview: (data) => {
+    preview: (data, { locale }) => {
       const path = generatePreviewPath({
         slug: typeof data?.slug === 'string' ? data.slug : '',
         collection: 'pages',
+        locale,
       })
 
-      return `${getServerSideURL()}${path}`
+      return `${process.env.NEXT_PUBLIC_SERVER_URL}${path}`
     },
     useAsTitle: 'title',
   },
   fields: [
     {
       name: 'title',
+      localized: true,
       type: 'text',
       required: true,
     },
@@ -77,6 +71,7 @@ export const Pages: CollectionConfig<'pages'> = {
             {
               name: 'layout',
               type: 'blocks',
+              localized: true,
               blocks: [CallToAction, Content, MediaBlock, Archive, FormBlock],
               required: true,
             },
@@ -119,7 +114,7 @@ export const Pages: CollectionConfig<'pages'> = {
         position: 'sidebar',
       },
     },
-    ...slugField(),
+    ...slugField('title', { slugOverrides: { localized: true } }),
   ],
   hooks: {
     afterChange: [revalidatePage],

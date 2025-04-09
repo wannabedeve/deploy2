@@ -2,24 +2,24 @@ import type { FieldHook } from 'payload'
 
 export const formatSlug = (val: string): string =>
   val
-    .replace(/ /g, '-')
-    .replace(/[^\w-]+/g, '')
-    .toLowerCase()
+.replace(/[ıİ]/g, 'i')
+.replace(/[öÖ]/g, 'o')
+.replace(/[şŞ]/g, 's')
+.replace(/[ğĞ]/g, 'g')
+.replace(/[üÜ]/g, 'u')
+.replace(/[Çç]/g, 'c')
+.replace(/[~!@#$%^&*()_+=\[\]{};:'"`\\|,<.>/?]/g, '-')
+.replace(/ /g, '-')
+.replace(/[^\w-]+/g, '')
+.replace(/-+/g, '-')
+.toLowerCase()
 
 export const formatSlugHook =
   (fallback: string): FieldHook =>
-  ({ data, operation, originalDoc, value }) => {
-    if (typeof value === 'string') {
-      return formatSlug(value)
+  ({ data, value, originalDoc, operation }) => {
+    if (operation === 'create' && !value) {
+      const fallbackValue = data?.[fallback] || originalDoc?.[fallback]
+      return fallbackValue ? formatSlug(fallbackValue) : ''
     }
-
-    if (operation === 'create' || !data?.slug) {
-      const fallbackData = data?.[fallback] || data?.[fallback]
-
-      if (fallbackData && typeof fallbackData === 'string') {
-        return formatSlug(fallbackData)
-      }
-    }
-
-    return value
+    return value ? formatSlug(value) : originalDoc?.slug
   }

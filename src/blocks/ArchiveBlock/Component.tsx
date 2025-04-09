@@ -6,13 +6,23 @@ import React from 'react'
 import RichText from '@/components/RichText'
 
 import { CollectionArchive } from '@/components/CollectionArchive'
+import { TypedLocale } from 'payload'
 
 export const ArchiveBlock: React.FC<
   ArchiveBlockProps & {
     id?: string
+    locale: TypedLocale
   }
 > = async (props) => {
-  const { id, categories, introContent, limit: limitFromProps, populateBy, selectedDocs } = props
+  const {
+    id,
+    categories,
+    introContent,
+    limit: limitFromProps,
+    populateBy,
+    selectedDocs,
+    locale,
+  } = props
 
   const limit = limitFromProps || 3
 
@@ -29,6 +39,7 @@ export const ArchiveBlock: React.FC<
     const fetchedPosts = await payload.find({
       collection: 'posts',
       depth: 1,
+      locale,
       limit,
       ...(flattenedCategories && flattenedCategories.length > 0
         ? {

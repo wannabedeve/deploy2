@@ -17,6 +17,9 @@ import { Header } from './Header/config'
 import { plugins } from './plugins'
 import { defaultLexical } from '@/fields/defaultLexical'
 import { getServerSideURL } from './utilities/getURL'
+import { resendAdapter } from '@payloadcms/email-resend'
+import localization from './i18n/localization'
+
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -81,6 +84,12 @@ export default buildConfig({
       }
     }
   ],
+  localization,
+  email: resendAdapter({
+    defaultFromAddress: process.env.DEFAULT_FROM_ADDRESS || 'dev@payloadcms.com',
+    defaultFromName: process.env.DEFAULT_FROM_NAME || 'Payload CMS',
+    apiKey: process.env.RESEND_API_KEY || '',
+  }),
   secret: process.env.PAYLOAD_SECRET,
   sharp,
   typescript: {

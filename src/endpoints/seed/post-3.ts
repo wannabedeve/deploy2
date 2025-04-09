@@ -1,7 +1,8 @@
 import type { Post } from '@/payload-types'
 
 export const post3: Partial<Post> = {
-  slug: 'medusajs-2-0-game-changer',
+  slug: 'dollar-and-sense',
+  slugLock: false,
   _status: 'published',
   // @ts-ignore
   authors: ['{{AUTHOR}}'],
@@ -9,25 +10,6 @@ export const post3: Partial<Post> = {
     root: {
       type: 'root',
       children: [
-        {
-          type: 'heading',
-          children: [
-            {
-              type: 'text',
-              detail: 0,
-              format: 0,
-              mode: 'normal',
-              style: '',
-              text: 'Discover the power of Medusa.js 2.0 and how it revolutionizes e-commerce development.',
-              version: 1
-            }
-          ],
-          direction: 'ltr',
-          format: '',
-          indent: 0,
-          tag: 'h2',
-          version: 1
-        },
         {
           type: 'block',
           fields: {
@@ -46,8 +28,8 @@ export const post3: Partial<Post> = {
                         format: 1,
                         mode: 'normal',
                         style: '',
-                        text: 'Disclaimer:',
-                        version: 1
+                        text: 'Disclaimer: ',
+                        version: 1,
                       },
                       {
                         type: 'text',
@@ -55,8 +37,8 @@ export const post3: Partial<Post> = {
                         format: 0,
                         mode: 'normal',
                         style: '',
-                        text: ' This content demonstrates the features of Payload CMS. To edit this post, ',
-                        version: 1
+                        text: 'This content is fabricated and for demonstration purposes only. To edit this post, ',
+                        version: 1,
                       },
                       {
                         type: 'link',
@@ -67,19 +49,250 @@ export const post3: Partial<Post> = {
                             format: 0,
                             mode: 'normal',
                             style: '',
-                            text: 'navigate to the admin dashboard',
-                            version: 1
-                          }
+                            text: 'navigate to the admin dashboard.',
+                            version: 1,
+                          },
                         ],
                         direction: 'ltr',
                         fields: {
                           linkType: 'custom',
                           newTab: true,
-                          url: '/admin'
+                          url: '/admin',
                         },
                         format: '',
                         indent: 0,
-                        version: 3
+                        version: 3,
+                      },
+                    ],
+                    direction: 'ltr',
+                    format: '',
+                    indent: 0,
+                    textFormat: 1,
+                    version: 1,
+                  },
+                ],
+                direction: 'ltr',
+                format: '',
+                indent: 0,
+                version: 1,
+              },
+            },
+            style: 'info',
+          },
+          format: '',
+          version: 2,
+        },
+        {
+          type: 'heading',
+          children: [
+            {
+              type: 'text',
+              detail: 0,
+              format: 0,
+              mode: 'normal',
+              style: '',
+              text: "Money isn't just currency; ",
+              version: 1,
+            },
+            {
+              type: 'text',
+              detail: 0,
+              format: 2,
+              mode: 'normal',
+              style: '',
+              text: "it's a language. ",
+              version: 1,
+            },
+            {
+              type: 'text',
+              detail: 0,
+              format: 0,
+              mode: 'normal',
+              style: '',
+              text: 'Dive deep into its nuances, where strategy meets intuition in the vast sea of finance.',
+              version: 1,
+            },
+          ],
+          direction: 'ltr',
+          format: '',
+          indent: 0,
+          tag: 'h2',
+          version: 1,
+        },
+        {
+          type: 'paragraph',
+          children: [
+            {
+              type: 'text',
+              detail: 0,
+              format: 0,
+              mode: 'normal',
+              style: '',
+              text: "Money, in its essence, transcends the mere concept of coins and paper notes; it becomes a profound language that speaks of value, trust, and societal structures. Like any language, it possesses intricate nuances and subtleties that require a discerning understanding. It's in these depths where the calculated world of financial strategy collides with the raw, instinctive nature of human intuition. Just as a seasoned linguist might dissect the syntax and semantics of a sentence, a financial expert navigates the vast and tumultuous ocean of finance, guided not only by logic and data but also by gut feelings and foresight. Every transaction, investment, and financial decision becomes a dialogue in this expansive lexicon of commerce and value.",
+              version: 1,
+            },
+          ],
+          direction: 'ltr',
+          format: '',
+          indent: 0,
+          textFormat: 0,
+          version: 1,
+        },
+        {
+          type: 'block',
+          fields: {
+            blockName: '',
+            blockType: 'mediaBlock',
+            media: '{{IMAGE_2}}',
+            position: 'default',
+          },
+          format: '',
+          version: 2,
+        },
+        {
+          type: 'heading',
+          children: [
+            {
+              type: 'text',
+              detail: 0,
+              format: 0,
+              mode: 'normal',
+              style: '',
+              text: 'Stock Market Dynamics: Bulls, Bears, and the Uncertain Middle',
+              version: 1,
+            },
+          ],
+          direction: 'ltr',
+          format: '',
+          indent: 0,
+          tag: 'h2',
+          version: 1,
+        },
+        {
+          type: 'paragraph',
+          children: [
+            {
+              type: 'text',
+              detail: 0,
+              format: 0,
+              mode: 'normal',
+              style: '',
+              text: 'The stock market is a realm of vast opportunity but also poses risks. Discover the forces that drive market trends and the strategies employed by top traders to navigate this complex ecosystem. From market analysis to understanding investor psychology, get a comprehensive insight into the world of stocks.',
+              version: 1,
+            },
+          ],
+          direction: 'ltr',
+          format: '',
+          indent: 0,
+          textFormat: 0,
+          version: 1,
+        },
+        {
+          type: 'paragraph',
+          children: [
+            {
+              type: 'text',
+              detail: 0,
+              format: 0,
+              mode: 'normal',
+              style: '',
+              text: "The stock market, often visualized as a bustling arena of numbers and ticker tapes, is as much about human behavior as it is about economics. It's a place where optimism, represented by the bullish rally, meets the caution of bearish downturns, with each vying to dictate the market's direction. But between these two extremes lies an uncertain middle ground, a zone populated by traders and investors who constantly weigh hope against fear. Successful navigation requires more than just financial acumen; it demands an understanding of collective sentiments and the ability to predict not just market movements, but also the reactions of other market participants. In this intricate dance of numbers and nerves, the most astute players are those who master both the hard data and the soft nuances of human behavior.",
+              version: 1,
+            },
+          ],
+          direction: 'ltr',
+          format: '',
+          indent: 0,
+          textFormat: 0,
+          version: 1,
+        },
+        {
+          type: 'block',
+          fields: {
+            blockName: 'Dynamic components',
+            blockType: 'banner',
+            content: {
+              root: {
+                type: 'root',
+                children: [
+                  {
+                    type: 'paragraph',
+                    children: [
+                      {
+                        type: 'text',
+                        detail: 0,
+                        format: 0,
+                        mode: 'normal',
+                        style: '',
+                        text: "This content above is completely dynamic using custom layout building blocks configured in the CMS. This can be anything you'd like from rich text and images, to highly designed, complex components.",
+                        version: 1,
+                      },
+                    ],
+                    direction: 'ltr',
+                    format: '',
+                    indent: 0,
+                    textFormat: 0,
+                    version: 1,
+                  },
+                ],
+                direction: 'ltr',
+                format: '',
+                indent: 0,
+                version: 1,
+              },
+            },
+            style: 'info',
+          },
+          format: '',
+          version: 2,
+        },
+      ],
+      direction: 'ltr',
+      format: '',
+      indent: 0,
+      version: 1,
+    },
+  },
+  meta: {
+    description: `Money isn't just currency; it's a language. Dive deep into its nuances, where strategy meets intuition in the vast sea of finance.`,
+    // @ts-ignore
+    image: '{{IMAGE_1}}',
+    title: 'Dollar and Sense: The Financial Forecast',
+  },
+  relatedPosts: [], // this is populated by the seed script
+  title: 'Dollar and Sense: The Financial Forecast',
+}
+
+export const post3_tr: Partial<Post> = {
+  slug: 'dolar-ve-anlam',
+  slugLock: false,
+  _status: 'published',
+  // @ts-ignore
+  authors: ['{{AUTHOR}}'],
+  content: {
+    root: {
+      type: 'root',
+      children: [
+        {
+          type: 'block',
+          fields: {
+            blockName: 'Yasal Uyarı',
+            blockType: 'banner',
+            content: {
+              root: {
+                type: 'root',
+                children: [
+                  {
+                    type: 'paragraph',
+                    children: [
+                      {
+                        type: 'text',
+                        detail: 0,
+                        format: 1,
+                        mode: 'normal',
+                        style: '',
+                        text: 'Sorumluluk Reddi: ',
+                        version: 1,
                       },
                       {
                         type: 'text',
@@ -87,27 +300,87 @@ export const post3: Partial<Post> = {
                         format: 0,
                         mode: 'normal',
                         style: '',
-                        text: '.',
-                        version: 1
-                      }
+                        text: 'Bu içerik hayalidir ve yalnızca gösterim amaçlıdır. Bu gönderiyi düzenlemek için, ',
+                        version: 1,
+                      },
+                      {
+                        type: 'link',
+                        children: [
+                          {
+                            type: 'text',
+                            detail: 0,
+                            format: 0,
+                            mode: 'normal',
+                            style: '',
+                            text: 'yönetim paneline gidin.',
+                            version: 1,
+                          },
+                        ],
+                        direction: 'ltr',
+                        fields: {
+                          linkType: 'custom',
+                          newTab: true,
+                          url: '/admin',
+                        },
+                        format: '',
+                        indent: 0,
+                        version: 3,
+                      },
                     ],
                     direction: 'ltr',
                     format: '',
                     indent: 0,
                     textFormat: 1,
-                    version: 1
-                  }
+                    version: 1,
+                  },
                 ],
                 direction: 'ltr',
                 format: '',
                 indent: 0,
-                version: 1
-              }
+                version: 1,
+              },
             },
-            style: 'info'
+            style: 'info',
           },
           format: '',
-          version: 2
+          version: 2,
+        },
+        {
+          type: 'heading',
+          children: [
+            {
+              type: 'text',
+              detail: 0,
+              format: 0,
+              mode: 'normal',
+              style: '',
+              text: 'Para sadece bir para birimi değil; ',
+              version: 1,
+            },
+            {
+              type: 'text',
+              detail: 0,
+              format: 2,
+              mode: 'normal',
+              style: '',
+              text: 'bir dildir. ',
+              version: 1,
+            },
+            {
+              type: 'text',
+              detail: 0,
+              format: 0,
+              mode: 'normal',
+              style: '',
+              text: 'Stratejinin sezgiyle buluştuğu finansın geniş denizine dalın.',
+              version: 1,
+            },
+          ],
+          direction: 'ltr',
+          format: '',
+          indent: 0,
+          tag: 'h2',
+          version: 1,
         },
         {
           type: 'paragraph',
@@ -118,25 +391,26 @@ export const post3: Partial<Post> = {
               format: 0,
               mode: 'normal',
               style: '',
-              text: "The e-commerce world is buzzing with excitement as Medusa.js 2.0 has officially been released! This major update brings a host of new features and improvements that are set to revolutionize how we build and manage online stores. In this post, we'll explore what's new in Medusa.js 2.0 and why it's a game-changer for developers and businesses alike.",
-              version: 1
-            }
+              text: 'Para, özünde, sadece madeni paralar ve banknotlar kavramını aşar; değer, güven ve sosyal yapılar hakkında derin bir dil haline gelir. Herhangi bir dil gibi, karmaşık nüanslara ve inceliklere sahiptir ve bunların anlaşılması sezgisel bir farkındalık gerektirir. İşte bu derinliklerde, stratejik finans dünyası insan sezgilerinin ham doğasıyla çarpışır. Deneyimli bir dilbilimci bir cümlenin sözdizimi ve anlamını analiz edebildiği gibi, bir finans uzmanı da finansın geniş ve çalkantılı okyanusunda gezinir; sadece mantık ve verilerle değil, aynı zamanda öngörüler ve içgüdülerle yönlendirilir. Her işlem, yatırım ve finansal karar, bu geniş ticaret ve değer sözlüğünde bir diyalog haline gelir.',
+              version: 1,
+            },
           ],
           direction: 'ltr',
           format: '',
           indent: 0,
           textFormat: 0,
-          version: 1
+          version: 1,
         },
         {
           type: 'block',
           fields: {
             blockName: '',
             blockType: 'mediaBlock',
-            media: '{{IMAGE_1}}'
+            media: '{{IMAGE_2}}',
+            position: 'default',
           },
           format: '',
-          version: 2
+          version: 2,
         },
         {
           type: 'heading',
@@ -147,15 +421,15 @@ export const post3: Partial<Post> = {
               format: 0,
               mode: 'normal',
               style: '',
-              text: "What's New in Medusa.js 2.0?",
-              version: 1
-            }
+              text: 'Hisse Senedi Piyasasının Dinamiği: Boğalar, Ayılar ve Belirsiz Orta Nokta',
+              version: 1,
+            },
           ],
           direction: 'ltr',
           format: '',
           indent: 0,
           tag: 'h2',
-          version: 1
+          version: 1,
         },
         {
           type: 'paragraph',
@@ -163,27 +437,18 @@ export const post3: Partial<Post> = {
             {
               type: 'text',
               detail: 0,
-              format: 1,
+              format: 0,
               mode: 'normal',
               style: '',
-              text: 'Reworked Admin Dashboard: ',
-              version: 1
+              text: 'Hisse senedi piyasası, geniş fırsatların bir alanıdır, ancak aynı zamanda riskler de taşır. Piyasayı yönlendiren güçleri ve en iyi trader\'ların bu karmaşık ekosistemde gezinmek için kullandıkları stratejileri keşfedin. Piyasa analizinden yatırımcı psikolojisini anlamaya kadar, hisse senetleri dünyasına kapsamlı bir bakış elde edin.',
+              version: 1,
             },
-            {
-              type: 'text',
-              detail: 0,
-              format: 0,
-              mode: 'normal',
-              style: '',
-              text: 'A more intuitive and visually appealing interface.',
-              version: 1
-            }
           ],
           direction: 'ltr',
           format: '',
           indent: 0,
           textFormat: 0,
-          version: 1
+          version: 1,
         },
         {
           type: 'paragraph',
@@ -191,351 +456,72 @@ export const post3: Partial<Post> = {
             {
               type: 'text',
               detail: 0,
-              format: 1,
+              format: 0,
               mode: 'normal',
               style: '',
-              text: 'Enhanced Inventory Management: ',
-              version: 1
+              text: 'Hisse senedi piyasası, genellikle sayıların ve kotasyon şeritlerinin hareketli bir arenası olarak tasvir edilir, ancak ekonomi kadar insan davranışlarıyla da ilgilidir. İyimserlik, boğa piyasası rallisiyle temsil edilirken, temkinlilik ayı piyasası düşüşleriyle karşılaşır ve her biri piyasanın yönünü belirlemek için mücadele eder. Ancak bu iki uç nokta arasında, trader\'ların ve yatırımcıların sürekli olarak umutla korkuyu tarttığı belirsiz bir orta nokta yatar. Başarılı bir navigasyon sadece finansal beceriden daha fazlasını gerektirir; kolektif duyguları anlamayı ve sadece piyasa hareketlerini değil, aynı zamanda diğer piyasa katılımcılarının tepkilerini tahmin etme yeteneğini de gerektirir. Bu karmaşık sayı ve sinir dansında, en yetenekli oyuncular hem sert verileri hem de insan davranışının yumuşak nüanslarını ustalıkla kullananlardır.',
+              version: 1,
             },
-            {
-              type: 'text',
-              detail: 0,
-              format: 0,
-              mode: 'normal',
-              style: '',
-              text: 'Support for multiple warehouses.',
-              version: 1
-            }
           ],
           direction: 'ltr',
           format: '',
           indent: 0,
           textFormat: 0,
-          version: 1
-        },
-        {
-          type: 'paragraph',
-          children: [
-            {
-              type: 'text',
-              detail: 0,
-              format: 1,
-              mode: 'normal',
-              style: '',
-              text: 'New Promotions Engine: ',
-              version: 1
-            },
-            {
-              type: 'text',
-              detail: 0,
-              format: 0,
-              mode: 'normal',
-              style: '',
-              text: 'More flexible and powerful discount configurations.',
-              version: 1
-            }
-          ],
-          direction: 'ltr',
-          format: '',
-          indent: 0,
-          textFormat: 0,
-          version: 1
-        },
-        {
-          type: 'paragraph',
-          children: [
-            {
-              type: 'text',
-              detail: 0,
-              format: 1,
-              mode: 'normal',
-              style: '',
-              text: 'Improved Software Architecture: ',
-              version: 1
-            },
-            {
-              type: 'text',
-              detail: 0,
-              format: 0,
-              mode: 'normal',
-              style: '',
-              text: 'Easier customization and feature additions.',
-              version: 1
-            }
-          ],
-          direction: 'ltr',
-          format: '',
-          indent: 0,
-          textFormat: 0,
-          version: 1
-        },
-        {
-          type: 'heading',
-          children: [
-            {
-              type: 'text',
-              detail: 0,
-              format: 0,
-              mode: 'normal',
-              style: '',
-              text: 'Why Choose Medusa.js 2.0?',
-              version: 1
-            }
-          ],
-          direction: 'ltr',
-          format: '',
-          indent: 0,
-          tag: 'h2',
-          version: 1
-        },
-        {
-          type: 'paragraph',
-          children: [
-            {
-              type: 'text',
-              detail: 0,
-              format: 0,
-              mode: 'normal',
-              style: '',
-              text: "Medusa.js 2.0 offers substantial improvements that benefit both business operations and development processes. Whether you're managing inventory or building custom features, this update provides tools that make your e-commerce journey smoother and more efficient.",
-              version: 1
-            }
-          ],
-          direction: 'ltr',
-          format: '',
-          indent: 0,
-          textFormat: 0,
-          version: 1
+          version: 1,
         },
         {
           type: 'block',
           fields: {
-            blockName: '',
-            blockType: 'mediaBlock',
-            media: '{{IMAGE_2}}'
+            blockName: 'Dinamik Bileşenler',
+            blockType: 'banner',
+            content: {
+              root: {
+                type: 'root',
+                children: [
+                  {
+                    type: 'paragraph',
+                    children: [
+                      {
+                        type: 'text',
+                        detail: 0,
+                        format: 0,
+                        mode: 'normal',
+                        style: '',
+                        text: 'Yukarıdaki içerik, CMS\'de yapılandırılmış özel yapı taşları kullanılarak tamamen dinamiktir. Bu, zengin metin ve görsellerden karmaşık ve yüksek tasarımlı bileşenlere kadar istediğiniz her şey olabilir.',
+                        version: 1,
+                      },
+                    ],
+                    direction: 'ltr',
+                    format: '',
+                    indent: 0,
+                    textFormat: 0,
+                    version: 1,
+                  },
+                ],
+                direction: 'ltr',
+                format: '',
+                indent: 0,
+                version: 1,
+              },
+            },
+            style: 'info',
           },
           format: '',
-          version: 2
+          version: 2,
         },
-        {
-          type: 'heading',
-          children: [
-            {
-              type: 'text',
-              detail: 0,
-              format: 0,
-              mode: 'normal',
-              style: '',
-              text: 'Deploy Medusa.js 2.0 on Railway',
-              version: 1
-            }
-          ],
-          direction: 'ltr',
-          format: '',
-          indent: 0,
-          tag: 'h2',
-          version: 1
-        },
-        {
-          type: 'paragraph',
-          children: [
-            {
-              type: 'text',
-              detail: 0,
-              format: 0,
-              mode: 'normal',
-              style: '',
-              text: "To make it even easier to get started with Medusa.js 2.0, we've created a one-click deploy template for Railway. This template includes:",
-              version: 1
-            }
-          ],
-          direction: 'ltr',
-          format: '',
-          indent: 0,
-          textFormat: 0,
-          version: 1
-        },
-        {
-          type: 'paragraph',
-          children: [
-            {
-              type: 'text',
-              detail: 0,
-              format: 1,
-              mode: 'normal',
-              style: '',
-              text: '• Automatic setup: ',
-              version: 1
-            },
-            {
-              type: 'text',
-              detail: 0,
-              format: 0,
-              mode: 'normal',
-              style: '',
-              text: 'Storefront, Redis, and PostgreSQL database',
-              version: 1
-            }
-          ],
-          direction: 'ltr',
-          format: '',
-          indent: 0,
-          textFormat: 0,
-          version: 1
-        },
-        {
-          type: 'paragraph',
-          children: [
-            {
-              type: 'text',
-              detail: 0,
-              format: 1,
-              mode: 'normal',
-              style: '',
-              text: '• API key sharing: ',
-              version: 1
-            },
-            {
-              type: 'text',
-              detail: 0,
-              format: 0,
-              mode: 'normal',
-              style: '',
-              text: 'Automatic sharing between backend and storefront',
-              version: 1
-            }
-          ],
-          direction: 'ltr',
-          format: '',
-          indent: 0,
-          textFormat: 0,
-          version: 1
-        },
-        {
-          type: 'paragraph',
-          children: [
-            {
-              type: 'text',
-              detail: 0,
-              format: 1,
-              mode: 'normal',
-              style: '',
-              text: '• Built-in features: ',
-              version: 1
-            },
-            {
-              type: 'text',
-              detail: 0,
-              format: 0,
-              mode: 'normal',
-              style: '',
-              text: 'Internal media storage, health checks, and automatic admin user creation',
-              version: 1
-            }
-          ],
-          direction: 'ltr',
-          format: '',
-          indent: 0,
-          textFormat: 0,
-          version: 1
-        },
-        {
-          type: 'paragraph',
-          children: [
-            {
-              type: 'text',
-              detail: 0,
-              format: 0,
-              mode: 'normal',
-              style: '',
-              text: 'Ready to get started? Check out our full guide on deploying Medusa.js 2.0 on Railway: ',
-              version: 1
-            },
-            {
-              type: 'link',
-              children: [
-                {
-                  type: 'text',
-                  detail: 0,
-                  format: 0,
-                  mode: 'normal',
-                  style: '',
-                  text: 'Medusa.js 2.0 Deployment Guide',
-                  version: 1
-                }
-              ],
-              direction: 'ltr',
-              fields: {
-                linkType: 'custom',
-                newTab: true,
-                url: 'https://funkyton.com/medusajs-2-0-is-finally-here/'
-              },
-              format: '',
-              indent: 0,
-              version: 3
-            }
-          ],
-          direction: 'ltr',
-          format: '',
-          indent: 0,
-          textFormat: 0,
-          version: 1
-        },
-        {
-          type: 'paragraph',
-          children: [
-            {
-              type: 'text',
-              detail: 0,
-              format: 0,
-              mode: 'normal',
-              style: '',
-              text: 'For those who want to dive deeper into the code, you can find our Medusa.js 2.0 boilerplate on GitHub: ',
-              version: 1
-            },
-            {
-              type: 'link',
-              children: [
-                {
-                  type: 'text',
-                  detail: 0,
-                  format: 0,
-                  mode: 'normal',
-                  style: '',
-                  text: 'Medusa.js 2.0 Railway Boilerplate',
-                  version: 1
-                }
-              ],
-              direction: 'ltr',
-              fields: {
-                linkType: 'custom',
-                newTab: true,
-                url: 'https://github.com/rpuls/medusajs-2.0-for-railway-boilerplate'
-              },
-              format: '',
-              indent: 0,
-              version: 3
-            }
-          ],
-          direction: 'ltr',
-          format: '',
-          indent: 0,
-          textFormat: 0,
-          version: 1
-        }
       ],
       direction: 'ltr',
       format: '',
       indent: 0,
-      version: 1
-    }
+      version: 1,
+    },
   },
   meta: {
-    description: 'Discover the power of Medusa.js 2.0 and how it revolutionizes e-commerce development.',
+    description: `Para sadece bir para birimi değil; bir dildir. Stratejinin sezgiyle buluştuğu finansın geniş denizine dalın.`,
     // @ts-ignore
     image: '{{IMAGE_1}}',
-    title: 'Medusa.js 2.0: A Game-Changer for E-commerce'
+    title: 'Dolar ve Anlam: Finansal Tahmin',
   },
-  relatedPosts: [], // this is populated by the seed script
-  title: 'Medusa.js 2.0: A Game-Changer for E-commerce'
+  relatedPosts: [], // başlangıç betiği ile dolduruluyor
+  title: 'Dolar ve Anlam: Finansal Tahmin',
 }

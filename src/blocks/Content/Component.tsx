@@ -2,11 +2,17 @@ import { cn } from 'src/utilities/cn'
 import React from 'react'
 import RichText from '@/components/RichText'
 
-import type { ContentBlock as ContentBlockProps } from '@/payload-types'
+import type { Page } from '@/payload-types'
 
 import { CMSLink } from '../../components/Link'
 
-export const ContentBlock: React.FC<ContentBlockProps> = (props) => {
+type Props = Extract<Page['layout'][0], { blockType: 'content' }>
+
+export const ContentBlock: React.FC<
+  {
+    id?: string
+  } & Props
+> = (props) => {
   const { columns } = props
 
   const colsSpanClasses = {

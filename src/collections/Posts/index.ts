@@ -1,4 +1,4 @@
-import type { CollectionConfig } from 'payload'
+import type { CollectionConfig, TypedLocale } from 'payload'
 
 import {
   BlocksFeature,
@@ -26,9 +26,8 @@ import {
   PreviewField,
 } from '@payloadcms/plugin-seo/fields'
 import { slugField } from '@/fields/slug'
-import { getServerSideURL } from '@/utilities/getURL'
 
-export const Posts: CollectionConfig<'posts'> = {
+export const Posts: CollectionConfig = {
   slug: 'posts',
   access: {
     create: authenticated,
@@ -36,37 +35,27 @@ export const Posts: CollectionConfig<'posts'> = {
     read: authenticatedOrPublished,
     update: authenticated,
   },
-  // This config controls what's populated by default when a post is referenced
-  // https://payloadcms.com/docs/queries/select#defaultpopulate-collection-config-property
-  // Type safe if the collection slug generic is passed to `CollectionConfig` - `CollectionConfig<'posts'>
-  defaultPopulate: {
-    title: true,
-    slug: true,
-    categories: true,
-    meta: {
-      image: true,
-      description: true,
-    },
-  },
   admin: {
     defaultColumns: ['title', 'slug', 'updatedAt'],
     livePreview: {
-      url: ({ data }) => {
+      url: ({ data, locale }) => {
         const path = generatePreviewPath({
           slug: typeof data?.slug === 'string' ? data.slug : '',
           collection: 'posts',
+          locale: locale.code,
         })
 
-        return `${getServerSideURL()}${path}`
+        return `${process.env.NEXT_PUBLIC_SERVER_URL}${path}`
       },
     },
-    preview: (data) => {
+    preview: (data, { locale }) => {
       const path = generatePreviewPath({
         slug: typeof data?.slug === 'string' ? data.slug : '',
         collection: 'posts',
+        locale,
       })
 
-      return `${getServerSideURL()}${path}`
+      return `${process.env.NEXT_PUBLIC_SERVER_URL}${path}`
     },
     useAsTitle: 'title',
   },
@@ -74,6 +63,7 @@ export const Posts: CollectionConfig<'posts'> = {
     {
       name: 'title',
       type: 'text',
+      localized: true,
       required: true,
     },
     {
@@ -84,6 +74,7 @@ export const Posts: CollectionConfig<'posts'> = {
             {
               name: 'content',
               type: 'richText',
+              localized: true,
               editor: lexicalEditor({
                 features: ({ rootFeatures }) => {
                   return [
@@ -214,7 +205,7 @@ export const Posts: CollectionConfig<'posts'> = {
         },
       ],
     },
-    ...slugField(),
+    ...slugField('title', { slugOverrides: { localized: true } }),
   ],
   hooks: {
     afterChange: [revalidatePost],

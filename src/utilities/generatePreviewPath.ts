@@ -1,4 +1,4 @@
-import { CollectionSlug } from 'payload'
+import { CollectionSlug, TypedLocale } from 'payload'
 
 const collectionPrefixMap: Partial<Record<CollectionSlug, string>> = {
   posts: '/posts',
@@ -8,10 +8,11 @@ const collectionPrefixMap: Partial<Record<CollectionSlug, string>> = {
 type Props = {
   collection: keyof typeof collectionPrefixMap
   slug: string
+  locale: string
 }
 
-export const generatePreviewPath = ({ collection, slug }: Props) => {
-  const path = `${collectionPrefixMap[collection]}/${slug}`
+export const generatePreviewPath = ({ collection, slug, locale }: Props) => {
+  const path = `/${locale}${collectionPrefixMap[collection]}/${slug}`
 
   const params = {
     slug,

@@ -3,7 +3,7 @@ import type { CollectionConfig } from 'payload'
 import { anyone } from '../access/anyone'
 import { authenticated } from '../access/authenticated'
 
-export const Categories: CollectionConfig = {
+const Categories: CollectionConfig = {
   slug: 'categories',
   access: {
     create: authenticated,
@@ -18,7 +18,10 @@ export const Categories: CollectionConfig = {
     {
       name: 'title',
       type: 'text',
+      localized: true,
       required: true,
     },
   ],
 }
+
+export default Categories

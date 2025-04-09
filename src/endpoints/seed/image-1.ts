@@ -1,7 +1,10 @@
 import type { Media } from '@/payload-types'
 
-export const image1: Omit<Media, 'createdAt' | 'id' | 'updatedAt'> = {
-  alt: 'Shirts',
+export const image1 = (locale: 'en' | 'tr'): Omit<Media, 'createdAt' | 'id' | 'updatedAt'> => ({
+  alt:
+    locale === 'en'
+      ? 'Curving abstract shapes with an orange and blue gradient'
+      : 'Turuncu ve mavi gradyanla eğimli soyut şekiller',
   caption: {
     root: {
       type: 'root',
@@ -15,7 +18,7 @@ export const image1: Omit<Media, 'createdAt' | 'id' | 'updatedAt'> = {
               format: 0,
               mode: 'normal',
               style: '',
-              text: 'Graphic by ',
+              text: locale === 'en' ? 'Photo by ' : 'Fotoğrafcı: ',
               version: 1,
             },
             {
@@ -27,7 +30,7 @@ export const image1: Omit<Media, 'createdAt' | 'id' | 'updatedAt'> = {
                   format: 0,
                   mode: 'normal',
                   style: '',
-                  text: 'Payload',
+                  text: 'Andrew Kliatskyi',
                   version: 1,
                 },
               ],
@@ -35,11 +38,20 @@ export const image1: Omit<Media, 'createdAt' | 'id' | 'updatedAt'> = {
               fields: {
                 linkType: 'custom',
                 newTab: true,
-                url: 'https://payloadcms.com/use-cases/headless-cms',
+                url: 'https://unsplash.com/@kirp',
               },
               format: '',
               indent: 0,
               version: 2,
+            },
+            {
+              type: 'text',
+              detail: 0,
+              format: 0,
+              mode: 'normal',
+              style: '',
+              text: locale === 'en' ? ' on Unsplash.' : 'Unsplashda.',
+              version: 1,
             },
           ],
           direction: 'ltr',
@@ -55,4 +67,4 @@ export const image1: Omit<Media, 'createdAt' | 'id' | 'updatedAt'> = {
       version: 1,
     },
   },
-}
+})

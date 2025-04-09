@@ -22,7 +22,6 @@ type Args = {
 }
 
 export default async function Page({ params: paramsPromise }: Args) {
-
   const { slug = 'home', locale = 'en' } = await paramsPromise
   const url = '/' + slug
 

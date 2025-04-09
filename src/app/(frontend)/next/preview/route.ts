@@ -3,7 +3,7 @@ import { draftMode } from 'next/headers'
 import { redirect } from 'next/navigation'
 import { getPayload } from 'payload'
 import configPromise from '@payload-config'
-import { CollectionSlug } from 'payload'
+import { CollectionSlug, TypedLocale } from 'payload'
 
 const payloadToken = 'payload-token'
 
@@ -67,13 +67,9 @@ export async function GET(
     // Verify the given slug exists
     try {
       const docs = await payload.find({
-        collection,
+        collection: collection,
         draft: true,
-        limit: 1,
-        // pagination: false reduces overhead if you don't need totalDocs
-        pagination: false,
-        depth: 0,
-        select: {},
+        locale: path.split('/')[0] as TypedLocale,
         where: {
           slug: {
             equals: slug,

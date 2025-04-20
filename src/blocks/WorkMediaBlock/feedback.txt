@@ -1,0 +1,46 @@
+ <div className="fleet-wrapper">
+          <div className="fleet-slider">
+            {images.map((img, index) => (
+              <>
+                <div
+                  key={index}
+                  className={clsx("fleet-slider__item", { active: activeIndex === index })}
+                  onMouseOver={() => setActiveIndex(index)}
+                  onMouseOut={() => setActiveIndex(null)}
+                >
+                  <div className={`fleet-slider-img flex flex-row`}>
+                    {/* {images.map((img, index) => ( */}
+                    <>
+                      <div className="container-imgs">
+
+                        <Image
+                          src={img.image.url}
+                          alt={img.image.alt || 'Media Image'}
+                          // layout="fill"
+                          // objectFit="cover"
+                          className="imges mb-[2%]"
+                          width={300}
+                          height={300}
+                        // className={` card`}
+                        />
+                        {/* w-1/${img.length + 1} p-5 h-auto */}
+                        {/* {(img || staticImage) && (
+                  <Media
+                    // imgClassName={cn('border border-border rounded-[0.8rem]', imgClassName)}
+                    resource={img}
+                    src={staticImage}
+                    className='w-[300px] h-[300px]'
+                    />
+                    )} */}
+                      </div>
+                    </>
+                    {/* ))} */}
+                    <div className="fleet-slider__textg">
+                      <span className="bigtitle">{"hi here is title"}</span>
+                    </div>
+                  </div>
+                </div>
+              </>
+            ))}
+          </div>
+        </div>

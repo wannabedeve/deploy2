@@ -20,6 +20,8 @@ import {
   OverviewField,
   PreviewField,
 } from '@payloadcms/plugin-seo/fields'
+import { WorkMediaBlock } from '@/blocks/WorkMediaBlock/config'
+import { WorkArchive } from '@/blocks/WorksBlock/config'
 export const Pages: CollectionConfig = {
   slug: 'pages',
   access: {
@@ -72,7 +74,7 @@ export const Pages: CollectionConfig = {
               name: 'layout',
               type: 'blocks',
               localized: true,
-              blocks: [CallToAction, Content, MediaBlock, Archive, FormBlock],
+              blocks: [CallToAction, Content, MediaBlock, Archive, FormBlock, WorkMediaBlock, WorkArchive],
               required: true,
             },
           ],

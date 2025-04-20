@@ -25,7 +25,7 @@ export async function generateStaticParams() {
     overrideAccess: false,
   })
 
-  return posts.docs.flatMap(({ slug }) => 
+  return posts.docs.flatMap(({ slug }) =>
     routing.locales.map(locale => ({
       slug,
       locale

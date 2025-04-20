@@ -5,7 +5,6 @@ export const searchFields: Field[] = [
     name: 'slug',
     type: 'text',
     index: true,
-    localized: true,
     admin: {
       readOnly: true,
     },
@@ -23,13 +22,11 @@ export const searchFields: Field[] = [
         type: 'text',
         name: 'title',
         label: 'Title',
-        localized: true,
       },
       {
         type: 'text',
         name: 'description',
         label: 'Description',
-        localized: true,
       },
       {
         name: 'image',
@@ -52,7 +49,7 @@ export const searchFields: Field[] = [
         type: 'text',
       },
       {
-        name: 'id',
+        name: 'categoryId',
         type: 'text',
       },
       {

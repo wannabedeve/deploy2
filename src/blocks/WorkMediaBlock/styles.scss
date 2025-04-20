@@ -1,0 +1,133 @@
+.fleet-wrappepr {
+    max-width: 100%;
+    width: 90%;
+    margin: 0;
+    overflow: hidden;
+    transition: all 2s;
+    -webkit-transition: all 2s;
+}
+
+.fleet-wrappepr:hover {
+    max-width: 120%;
+    width: 120%;
+    margin-left: -10%;
+}
+
+.bigtitle {
+    font-weight: bold;
+}
+
+.fleet-slider {
+    background: transparent;
+    height: 300px;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: -5%;
+    margin-right: -5%;
+}
+
+.fleet-slider__item {
+    flex: 1;
+    border-left: 4px solid #fff;
+    -webkit-transform: skew(-20deg);
+    transform: skew(-20deg);
+    overflow: hidden;
+    position: relative;
+    left: 0px;
+    opacity: 1;
+    -webkit-transition: all 0.9s;
+    transition: all 0.9s;
+    cursor: pointer;
+}
+
+.fleet-slider__item.active {
+    flex: 50%;
+    opacity: 1;
+}
+
+.fleet-slider__item.active .fleet-slider__textg {
+    -webkit-transition: all 0.9s;
+    transition: all 0.9s;
+    color: #000;
+    text-align: center;
+    font-size: 35px;
+    opacity: 1;
+    width: 100%;
+    right: 10%;
+    position: relative
+}
+
+.fleet-slider__item.active .fleet-slider__textd {
+    -webkit-transition: all 0.9s;
+    transition: all 0.9s;
+    color: #BCCF00;
+    font-size: 50px;
+    opacity: 1;
+}
+
+.fleet-slider__textg {
+    color: #009FC0;
+    font-size: 14px;
+    font-weight: 200;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    opacity: 0;
+}
+
+.fleet-slider-img {
+    background-image: url(https://alphapriority.com/wp/wp-content/uploads/2017/10/2011-cadillac-escalade-esv-2wd-suv-angular-front.png)
+}
+
+.fleet-slider-img {
+    background-color: rgb(230, 230, 230);
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: -9.5vw;
+    bottom: 0;
+    right: -9.5vw;
+    -webkit-transform: skew(20deg);
+    transform: skew(20deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.fleet-slider__textd {
+    color: #BCCF00;
+    font-size: 14px;
+    font-weight: 200;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    opacity: 0;
+}
+
+
+
+
+.container-imgs {
+    display: flex;
+    flex-wrap: wrap;
+    /* Ensures images wrap if they overflow */
+    justify-content: center;
+    /* Centers images */
+    gap: 10px;
+    /* Adds spacing between images */
+}
+
+.container-imgs .imges {
+    width: 100%;
+    max-width: 300px;
+    /* Limits image size */
+    height: auto;
+    /* Maintains aspect ratio */
+    object-fit: cover;
+    /* Ensures images are cropped properly */
+    border-radius: 10px;
+    /* Optional: Rounds corners */
+}

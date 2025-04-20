@@ -1,0 +1,92 @@
+.portfolio-area-wrap {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+}
+
+.containeres {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.col-lg-4 {
+  width: 100%;
+  padding: 15px;
+}
+
+
+.port-item {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 10px;
+  transition: transform 0.3s;
+}
+
+.port-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.port-item:hover {
+  transform: translateY(-5px);
+}
+
+
+
+
+@media (min-width: 992px) {
+  .col-lg-4 {
+    width: 33.3333%;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .port-item img {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .port-item img {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+
+
+
+
+/* Main Css Here */
+.port-item {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+  max-height: 400px;
+  overflow: hidden;
+}
+
+.port-item img {
+  width: 100%;
+  transition: 40s;
+}
+
+.port-item:hover img {
+  transform: translateY(calc(-100% + 400px));
+}
+
+
+/* Padding  */
+.portfolio-area-wrap {
+  padding: 50px 0;
+}

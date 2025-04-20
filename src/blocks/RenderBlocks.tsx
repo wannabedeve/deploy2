@@ -9,6 +9,8 @@ import { ContentBlock } from '@/blocks/Content/Component'
 import { FormBlock } from '@/blocks/Form/Component'
 import { MediaBlock } from '@/blocks/MediaBlock/Component'
 import { TypedLocale } from 'payload'
+import { WorkMediaBlock } from './WorkMediaBlock/Component'
+import { WorkArchiveBlock } from './WorksBlock/Component'
 
 const blockComponents = {
   archive: ArchiveBlock,
@@ -16,6 +18,8 @@ const blockComponents = {
   cta: CallToActionBlock,
   formBlock: FormBlock,
   mediaBlock: MediaBlock,
+  workMediaBlock: WorkMediaBlock,
+  workArchive: WorkArchiveBlock,
 }
 
 export const RenderBlocks: React.FC<{

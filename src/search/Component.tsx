@@ -4,12 +4,10 @@ import { Label } from '@/components/ui/label'
 import React, { useState, useEffect } from 'react'
 import { useDebounce } from '@/utilities/useDebounce'
 import { useRouter } from 'next/navigation'
-import { useTranslations } from 'next-intl'
 
 export const Search: React.FC = () => {
   const [value, setValue] = useState('')
   const router = useRouter()
-  const t = useTranslations()
 
   const debouncedValue = useDebounce(value)
 
@@ -32,7 +30,7 @@ export const Search: React.FC = () => {
           onChange={(event) => {
             setValue(event.target.value)
           }}
-          placeholder={t('search')}
+          placeholder="Search"
         />
         <button type="submit" className="sr-only">
           submit
